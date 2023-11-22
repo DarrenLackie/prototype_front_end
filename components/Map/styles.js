@@ -8,11 +8,6 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '100%',
     },
-    polygon: {
-        color: 'yellow',
-        backgroundColor: 'pink'
-    }
-
 });
 
 export default styles
