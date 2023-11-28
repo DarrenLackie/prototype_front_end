@@ -1,3 +1,62 @@
+// import { StatusBar } from "expo-status-bar";
+// import { StyleSheet, View } from "react-native";
+// import { useState, useEffect } from 'react';
+// import * as Location from 'expo-location';
+
+// export default function App() {
+//     const [location, setLocation] = useState()
+
+//     useEffect(() => {
+//         const getPermissions = async () => {
+//             let { status } = await Location.requestForegroundPermissionsAsync()
+//             if (status !== 'granted') {
+//                 console.log("Please grant location permissions")
+//                 return
+//             }
+
+//             let currentLocation = await Location.getCurrentPositionAsync()
+//             setLocation(currentLocation)
+//             console.log("Location:")
+//             console.log(currentLocation)
+//         }
+//         getPermissions()
+
+//     }, [])
+
+//     return (
+//         <View style={styles.container}>
+//             <StatusBar style="auto" />
+//         </View>
+//     )
+// }
+
+// const styles = StyleSheet.create({
+//     container: {
+//         backgroundColor: '#fff',
+//         alignItems: 'center',
+//         justifyContent: 'center'
+//     }
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import React from 'react';
 import { Text, View } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -23,27 +82,27 @@ const Tab = createBottomTabNavigator();
 function MapScreen() {
 return (
     <View style={{ flex: 1 }}>
-    <MapView
-        style={styles.map}
-        provider={PROVIDER_GOOGLE}
-        region={{
-        latitude: 55.9533,
-        longitude: -3.1883,
-        latitudeDelta: 0.0922,
-        longitudeDelta: 0.0421,
-        }}
-    >
-    <Zone1 />
-    <Zone1A />
-    <Zone2 />
-    <Zone3 />
-    <Zone4 />
-    <Zone5 />
-    <Zone5A />
-    <Zone6 />
-    <Zone7 />
-    <Zone8 />
-    </MapView>
+        <MapView
+            style={styles.map}
+            provider={PROVIDER_GOOGLE}
+            region={{
+            latitude: 55.9533,
+            longitude: -3.1883,
+            latitudeDelta: 0.0922,
+            longitudeDelta: 0.0421,
+            }}
+        >
+            <Zone1 />
+            <Zone1A />
+            <Zone2 />
+            <Zone3 />
+            <Zone4 />
+            <Zone5 />
+            <Zone5A />
+            <Zone6 />
+            <Zone7 />
+            <Zone8 />
+        </MapView>
     </View>
 );
 }
